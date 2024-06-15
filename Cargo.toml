@@ -3,10 +3,11 @@ name = "currency_converter"
 version = "0.1.0"
 authors = ["Alex Xia"]
 description = "A simple CLI tool to convert GBP to CNY using real-time exchange rates."
-edition = "2024"
+edition = "2018"
 homepage ="https://github.com/xyf2002/currency_converter"
+
 repository ="https://github.com/xyf2002/currency_converter"
-keywords = ["currency", "exchange", "converter", "rates", "cli", "command-line", "tool", , "real-time", "finance", "api", "rust", "utility"]
+keywords = ["currency", "exchange", "converter", "rates", "cli", "command-line", "tool",  "real-time", "finance", "api", "rust", "utility"]
 readme = "README.md"
 
 [dependencies]
