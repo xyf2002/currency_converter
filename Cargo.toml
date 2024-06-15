@@ -8,7 +8,7 @@ license = "MIT"
 homepage ="https://github.com/xyf2002/currency_converter"
 
 repository ="https://github.com/xyf2002/currency_converter"
-keywords = ["currency", "exchange", "converter", "rates", "cli", "command-line", "tool",  "real-time", "finance", "api", "rust", "utility"]
+keywords = ["currency", "converter", "rates", "cli"]
 readme = "README.md"
 
 [dependencies]
