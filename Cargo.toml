@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Alex Xia"]
 description = "A simple CLI tool to convert GBP to CNY using real-time exchange rates."
 edition = "2018"
+license = "MIT"
 homepage ="https://github.com/xyf2002/currency_converter"
 
 repository ="https://github.com/xyf2002/currency_converter"
