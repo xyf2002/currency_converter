@@ -1,6 +1,6 @@
 [package]
 name = "currency_converter_cli"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Alex Xia"]
 description = "A simple CLI tool to convert GBP to CNY using real-time exchange rates."
 edition = "2018"
