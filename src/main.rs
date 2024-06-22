@@ -86,11 +86,14 @@ fn main() {
 }
 
 fn print_menu() {
-    println!("Currency Converter Menu:");
-    println!("1. Convert currency");
-    println!("2. Reverse convert currency");
-    println!("3. List available currencies");
-    println!("Q. Quit");
+    println!("=============================");
+    println!("  Currency Converter Menu:");
+    println!("=============================");
+    println!("  1. Convert currency");
+    println!("  2. Reverse convert currency");
+    println!("  3. List available currencies");
+    println!("  Q. Quit");
+    println!("=============================");
 }
 
 fn get_user_input(prompt: &str) -> String {
@@ -120,9 +123,9 @@ fn get_conversion_details() -> (f64, String, String) {
 }
 
 fn select_currency(prompt: &str, currencies: &[&str]) -> String {
-    println!("{}", prompt);
+    println!("\n{}", prompt);
     for (index, &currency) in currencies.iter().enumerate() {
-        println!("{}. {}", index + 1, currency);
+        println!("  {}. {}", index + 1, currency);
     }
 
     loop {
@@ -145,10 +148,12 @@ fn convert_currency(amount: f64, from: &str, to: &str, api_key: &str) {
             let symbols = get_currency_symbols();
             let from_symbol = symbols.get(from).unwrap_or(&from);
             let to_symbol = symbols.get(to).unwrap_or(&to);
+            println!("\n=============================");
             println!(
                 "{:.2} {}{} is {:.2} {}{} (Rate as of {})",
                 from_symbol, amount, from, to_symbol, converted_amount, to, update_time
             );
+            println!("=============================\n");
         }
         Err(e) => {
             eprintln!("Error fetching exchange rate: {}", e);
@@ -163,10 +168,12 @@ fn reverse_convert_currency(amount: f64, from: &str, to: &str, api_key: &str) {
             let symbols = get_currency_symbols();
             let from_symbol = symbols.get(from).unwrap_or(&from);
             let to_symbol = symbols.get(to).unwrap_or(&to);
+            println!("\n=============================");
             println!(
                 "{:.2} {}{} is {:.2} {}{} (Rate as of {})",
                 to_symbol, amount, to, from_symbol, converted_amount, from, update_time
             );
+            println!("=============================\n");
         }
         Err(e) => {
             eprintln!("Error fetching exchange rate: {}", e);
@@ -182,7 +189,7 @@ fn list_currencies() {
 
     println!("Available currencies:");
     for currency in currencies {
-        println!("{}", currency);
+        println!("  {}", currency);
     }
 }
 
